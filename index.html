@@ -8,7 +8,7 @@
 
 
     <title>Dynamic Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assests/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 
@@ -28,7 +28,9 @@
             <div class="nav_menu" id="nav_menu">
                 <ul class="nav_list">
                     <li class="nav_item">
-                        <a href="index.html" class="nav_link active link">Home</a>
+                        <a href="index.html" class="nav_link active-link">Home</a>
+
+                        <!-- oktat problem -->
                     </li>
                     <li class="nav_item">
                         <a href="shop.html" class="nav_link">shop</a>
@@ -46,9 +48,13 @@
                         <a href="contact.html" class="nav_link">Contact</a>
                     </li>
                 </ul>
+                <div class="nav_close" id="nav_close">
+                    <i class="bx bx-x"></i>
+                </div>
+                
             </div>
             <div class="nav_btns">
-                <div class="loggin_toggle" id="loggin-toggle">
+                <div class="loggin_toggle" id="login-button">
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="nav_shop" id="cart-shop">
@@ -63,8 +69,8 @@
 
 
     <!-- ----------CART--------- -->
-    <div class="cart" id="cart">
-        <i class="bx bx-x cart_close"></i>
+    <div class="cart " id="cart">
+        <i class="bx bx-x cart_close" id="cart_close"></i>
 
         <h2 class="cart_title-center">My Cart</h2>
 
@@ -500,24 +506,9 @@
     </footer>
 
     <!-- -------------------------scrool up --------------->
-<a href="" class="scrollup" id="scroll-up">
-    <i class="bx bx_up_arrow-alt scrollup_icon"></i>
-</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <a href="" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup_icon"></i>
+    </a> 
 
 
 
