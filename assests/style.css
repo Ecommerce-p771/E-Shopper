@@ -1209,7 +1209,19 @@ input {
         grid-template-columns: 1fr;
         row-gap: 1.5rem;
     }
-       /* 1gnta 38m buccina */
+       .about_container{
+        column-gap: 4rem;
+       }
+       .about_img{
+        width: 280px;
+       }
+       .details_container{
+        grid-template-columns: 1.1fr .9fr;
+       }
+       .details_title
+       {
+        margin-bottom: var(--mb-0-5);
+       }
 
 }
 
@@ -1345,7 +1357,18 @@ input {
         row-gap: 2rem;
         justify-content: start;
     } */
+     .about_container{
+        grid-template-columns: 1fr;
+        row-gap:2rem ;
+     }
+     .details_container{
+        grid-template-columns: .8fr;
+        justify-content: center;
+        row-gap: 2rem;
+     }
+    
 
+/* 2h  bucci na */
     .footer_copy {
         margin-top: 4.5rem;
     }
@@ -1400,6 +1423,9 @@ input {
         grid-template-columns: 1fr;
         row-gap: .2rem;
     }
+    .details_container{
+      grid-template-columns: 1fr;  
+    }
 }
 
 /* For small devices */
@@ -1441,12 +1467,152 @@ input {
     .pagination span {
         font-size: var(--small-font-size);
     }
+    .blog_post{
+        padding: .8rem;
+    }
+    .product_images{
+        grid-template-columns: 1fr;
+    }
 }
 
 .active-link {
     background-color: hwb(21 2% 4% / 0.956);
     border-radius: 8px;
 }
+/* -----------------------details page------------ */
+
+    .details_container{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 3rem;
+     }
+.product_images{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+}
+.product_img{
+    background-color: var(--container-color);
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    position: relative;
+    cursor: pointer;
+}
+.details_img-tag{
+position: absolute;
+top: 8%;
+left: 8%;
+background-color: var(--first-color);
+color:#c79292;
+font-size: var(--small-font-size);
+padding: .16rem .5rem;
+border-radius: .25rem;
+
+}
+.product_img img{
+    width: 150px;
+}
+
+.details_subtitle{
+font-size: var(--small-font-size);
+color: var(--text-color);
+margin-bottom: var(--mb-0-5);
+}
+.details_title{
+font-size: var(--h2-font-size);
+font-weight: var(--font-medium);
+margin-bottom: var(--mb-0-75);
+}
+.rating{
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+    margin-bottom:var(--mb-1) ;
+}
+.rating span{
+    font-size: var(--small-font-size);
+}
+.rating i {
+    margin-right: .1rem;
+}
+
+.details_prices{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .8rem;
+    margin-bottom: var(--mb-1-5);
+}
+.details_price{
+font-weight: var(--font-medium);
+color: var(--title-color);
+font-size: var(--h3-font-size);
+}
+.details_discount{
+    color: var(--first-color);
+    text-decoration: line-through;
+    font-weight: var(--font-medium);
+}
+.details_percentage{
+    background-color: var(--title-color);
+    padding: .25rem .40rem;
+    font-size: var(--smaller-font-size);
+    color: #fff;
+}
+.description_details{
+    margin-bottom: var(--mb-2);
+    font-size: var(--small-font-size);
+}
+.description_title{
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+.details .cart_amount{
+    margin-bottom: var(--mb-2);
+}
+
+
+
+
+
+
+
+
+
+/* -------------------ABOUT PAGE------------------ */
+
+.about_container{
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 7rem;
+}
+.about_img{
+width: 380px;
+justify-self: center;
+}
+.about_title{
+margin-bottom: var(--mb-1);
+text-align: left;
+}
+
+.about_description{
+    margin-bottom: var(--mb-2);
+}
+.about_details{
+    display: grid;
+    row-gap: 1rem;
+}
+.about_details-description{
+    display: inline-flex;
+    column-gap: .5rem;
+    font-size: var(--small-font-size);
+}
+.about_details-icon{
+    font-size: 1rem;
+    color: var(--first-color);
+    margin-top: .15rem;
+}
+
 
 /*-----------------BLOG PAgE----------------  */
 .blog_container {
@@ -1564,6 +1730,7 @@ input {
 
 /* -------------CONTACT PAGE------------- */
 .contact__container {
+    display: grid;
     grid-template-columns: .9fr 1.1fr;
     column-gap: 1.5rem;
 }
@@ -1600,6 +1767,7 @@ color: var(--text-color);
     color: var(--title-color);
 }
 .contact__inputs{
+    
     grid-template-columns: repeat(2, 1fr);
     column-gap:1.5rem ;
 }
