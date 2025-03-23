@@ -1185,12 +1185,32 @@ input {
     .shop_title {
         font-size: var(--normal-font-size);
     }
-    .blog_post{
-       column-gap: 1.6rem; 
+
+    .blog_post {
+        column-gap: 1.6rem;
     }
-    .blog_title{
+
+    .blog_title {
         font-size: var(--normal-font-size);
     }
+
+    .question_group {
+        row-gap: 1.5rem;
+    }
+
+    .question_header {
+        padding: .75rem .5rem;
+    }
+
+    .question_description {
+        padding: 0 1.25rem 1.25rem 2.25rem;
+    }
+    .contact__inputs{
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+    }
+       /* 1gnta 38m buccina */
+
 }
 
 /* For medium devices */
@@ -1225,6 +1245,11 @@ input {
         align-items: center;
         column-gap: 2rem; */
     }
+    .contact__inputs{
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+    }
+
 
     .nav_toggle,
     .nav_close {
@@ -1306,15 +1331,20 @@ input {
     .pagination {
         justify-content: center;
     }
-    .blog_post{
-        grid-template-columns: repeat(2 ,1fr);
+
+    .blog_post {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* .question_container{
+        grid-template-columns: 1fr;
     }
 
     .footer_container {
         grid-template-columns: 1fr;
         row-gap: 2rem;
         justify-content: start;
-    }
+    } */
 
     .footer_copy {
         margin-top: 4.5rem;
@@ -1361,13 +1391,21 @@ input {
     .pagination {
         column-gap: .4rem;
     }
-    .blog_post{
+
+    .blog_post {
         grid-template-columns: 1fr;
         row-gap: .8rem;
+    }
+    .contact__container{
+        grid-template-columns: 1fr;
+        row-gap: .2rem;
     }
 }
 
 /* For small devices */
+
+
+
 @media screen and (max-width: 320px) {
     .container {
         margin-right: var(--mb-1);
@@ -1439,14 +1477,138 @@ input {
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-5);
 }
-.blog_date{
+
+.blog_date {
     font-size: var(--smaller-font-size);
     color: var(--text-color);
     margin-bottom: var(--mb-0-75);
 }
-.read_more{
+
+.read_more {
     text-align: right;
 }
-.blog_post{
+
+.blog_post {
     padding: .8rem;
+}
+
+/*--------------------- FAQS PAGE --------------------*/
+.question_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.question_group {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.question_item {
+    background-color: var(--container-color);
+    border-radius: .25rem;
+}
+
+.question_item-title {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.question_icon {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+.question_description {
+    font-size: var(--smaller-font-size);
+    padding: 0 3.5rem 2.25rem 2.75rem;
+}
+
+.question_header {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.question_content {
+    overflow: hidden;
+    height: 0;
+}
+
+.question_item,
+.question_header,
+.question_item-title,
+.question_icon,
+.question_description,
+.question_content {
+    transition: .3s;
+}
+
+.accordion-open .question_header,
+.accordion-open .question_content {
+    background-color: var(--first-color);
+}
+
+.accordion-open .question_item-title,
+.accordion-open .question_description,
+.accordion-open .question_icon {
+    color: #fff;
+}
+
+.accordion-open.question_icon {
+    transform: rotate(45deg);
+}
+
+
+/* -------------CONTACT PAGE------------- */
+.contact__container {
+    grid-template-columns: .9fr 1.1fr;
+    column-gap: 1.5rem;
+}
+
+.contact__information {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mb-2);
+}
+
+.contact__icon {
+    font-size: 2rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+}
+.contact__title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+.contact__subtitle{
+font-size: var(--small-font-size);
+color: var(--text-color);
+}
+.contact__form{
+    row-gap: 1.5rem;
+}
+.contact__content{
+    background-color: var(--container-color);
+    border-radius: .5rem;
+    padding: .75rem 1rem .25rem;
+}
+.contact__label{
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+}
+.contact__inputs{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap:1.5rem ;
+}
+.contact__input{
+    width: 100%;
+    background-color: var(--container-color);
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    padding: .25rem .5rem .5rem 0;
 }

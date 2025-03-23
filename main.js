@@ -85,3 +85,36 @@ if (navClose) {
         navMenu.classList.remove('show-menu'); // Fixed from `cart` to `navMenu`
     });
 }
+
+// --------------QUESTION ACCORDION------------------
+// --------------QUESTION ACCORDION------------------
+const accordionItems = document.querySelectorAll('.question_item');
+
+accordionItems.forEach((item) => {
+    const accordionHeader = item.querySelector('.question_header');
+
+    accordionHeader.addEventListener('click', () => {
+        const openItem = document.querySelector('.accordion-open');
+
+        // Close the currently open item if it's different from the clicked one
+        if (openItem && openItem !== item) {
+            toggleItem(openItem, false);
+        }
+
+        // Toggle the clicked item
+        toggleItem(item, !item.classList.contains('accordion-open'));
+    });
+});
+
+const toggleItem = (item) => {
+    const accordionContent = item.querySelector('.question_content');
+
+    if (item.classList.contains('accordion-open')) {
+    accordionContent.removeAttribute ('style')
+    item.classList.remove('accordion-open');
+} else {
+    accordionContent.style.height = accordionContent.scrollHeight + 'px';
+    item.classList.add('accordion-open');
+}
+};
+
